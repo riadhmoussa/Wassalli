@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etContentClaim"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10.0dip"
+        android:layout_weight="1.0"
+        android:background="@android:drawable/editbox_background"
+        android:ems="15"
+        android:gravity="start|top"
+        android:hint="Qu'est-ce qui ne va pas !!"
+        android:inputType="textMultiLine"
+        android:paddingTop="9.0dip"
+        android:paddingBottom="9.0dip"
+        android:textAlignment="center"
+        android:textColor="#ff1a102c"
+        android:textSize="20.0dip" />
+
+    <Button
+        android:id="@+id/BuDoneClaim"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0pt"
+        android:layout_margin="30.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/green_button"
+        android:onClick="BuAddCart"
+        android:text="Terminé"
+        android:textColor="#ff06071c" />
+</LinearLayout>

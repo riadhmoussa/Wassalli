@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:nestedScrollingEnabled="false"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Settings_Citoyen">
+
+    <LinearLayout
+        android:padding="5pt"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:touchscreenBlocksFocus="false"
+        android:layout_marginBottom="3dp">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="125px"
+            android:ems="10"
+            android:id="@+id/oldEmail"
+            android:layout_weight="1"
+            android:textColor="#ff1a102c"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="20dp"
+            android:hint="E-mail"
+            android:textAlignment="center"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textEmailAddress" />
+        <Button
+            android:id="@+id/Bureg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0"
+            android:background="@drawable/buttonblue"
+            android:onClick="ResetPassword"
+            android:text="Change Password"
+            android:textColor="#ff06071c"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+</LinearLayout>

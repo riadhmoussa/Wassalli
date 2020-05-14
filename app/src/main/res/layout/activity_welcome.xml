@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:padding="15.0pt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3.0dip">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:padding="3.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:src="@drawable/car"
+
+            />
+
+
+
+
+        <Button
+            android:textColor="#ff06071c"
+
+            android:background="@drawable/buttonblue"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0pt"
+            android:layout_marginBottom="10.0dip"
+            android:text="start"
+            android:layout_weight="0.0"
+            android:onClick="BuNext" />
+    </LinearLayout>
+</RelativeLayout>

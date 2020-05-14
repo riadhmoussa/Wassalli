@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_weight="1.0"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:textAlignment="center"
+        android:hint="Adresse préférée"
+        android:inputType="textEmailAddress"
+        android:paddingTop="9.0dip"
+        android:paddingBottom="9.0dip"
+        android:textColor="#ff1a102c"
+        android:textSize="20.0dip" />
+
+
+    <DatePicker
+        android:id="@+id/PickDate"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_weight="1.0"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:paddingTop="9.0dip"
+        android:paddingBottom="9.0dip"
+        android:textColor="#ff1a102c"
+        android:textSize="20.0dip"
+        android:calendarViewShown="false"
+
+
+        android:datePickerMode="spinner" />
+
+    <Button
+        android:id="@+id/BuDone"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0pt"
+        android:layout_margin="30.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/green_button"
+        android:onClick="BuAddCart"
+        android:text="Chercher"
+        android:textColor="#ff06071c" />
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CitoyerProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+    <TextView
+        style="@style/headerText"
+        android:text="Account Info"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/ivprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp" />
+
+        <LinearLayout style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/nameImageView"
+            android:src="@drawable/ic_name"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/profileDetailsTextMain"
+            android:layout_toRightOf="@id/nameImageView"
+            android:text="Nom et Prénom" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/nameImageView" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/mobileImageView"
+            android:src="@drawable/ic_mobile"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:text="Mobile"
+            android:layout_toRightOf="@id/mobileImageView"
+            style="@style/profileDetailsTextMain"/>
+
+        <TextView
+            android:id="@+id/txTel"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/mobileImageView" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/emailImageView"
+            android:src="@drawable/ic_email"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:text="Email"
+            android:layout_toRightOf="@id/emailImageView"
+            style="@style/profileDetailsTextMain" />
+
+        <TextView
+            android:id="@+id/txEmail"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/emailImageView" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/addressImageView"
+            android:src="@drawable/ic_address"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:text="Address"
+            android:layout_toRightOf="@id/addressImageView"
+            style="@style/profileDetailsTextMain" />
+
+        <TextView
+            android:id="@+id/tvAdresse"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/addressImageView" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/dobImageView"
+            android:src="@drawable/ic_dob"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            style="@style/profileDetailsTextMain"
+            android:layout_toRightOf="@id/dobImageView"
+            android:text="Date de naissance" />
+
+        <TextView
+            android:id="@+id/DateB"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/dobImageView" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    android:background="@color/whitebackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:textAlignment="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingRight="7dp"
+        android:background="@drawable/background"
+        android:paddingTop="2dp"
+        android:paddingBottom="5dp"
+
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:layoutDirection="ltr"
+            android:textAlignment="center"
+
+            android:background="@drawable/background"
+            android:paddingTop="1dp"
+            android:paddingBottom="6dp"
+
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textStyle="italic"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="2015-12-11"
+                    android:textSize="14dp"
+
+                    android:id="@+id/txt_news_date" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+     <!--   <WebView
+            android:background="@drawable/background"
+
+            android:layout_width="fill_parent"
+            android:layout_height="690.50px"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/wv_map"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/txtflollower"
+            android:layout_weight="0"
+            android:layout_marginBottom="1dp" >
+
+        </WebView>-->
+
+        <LinearLayout
+
+            android:paddingLeft="10dp"
+            android:paddingRight="3dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="5dp"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:background="@drawable/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:id="@+id/iv_route"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/personne" />
+
+            <Button
+                android:id="@+id/BuAccepRecom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_button"
+                android:layout_weight="1"
+                android:text="Accepted"
+                android:textColor="#ff06071c"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

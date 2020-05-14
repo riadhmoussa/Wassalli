@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="15pt">
+
+
+                <LinearLayout
+                    android:id="@+id/LLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="vertical"
+                        android:padding="5pt"
+                        android:touchscreenBlocksFocus="false">
+
+                        <EditText
+                            android:id="@+id/et_nom_prenom"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100px"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:hint="Nom  Prénom"
+                            android:inputType="text"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="9dp"
+                            android:textAlignment="center"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20dp" />
+
+
+                        <EditText
+                            android:id="@+id/et_numTel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100px"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:hint="Numéro Téléphone"
+                            android:inputType="number"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="9dp"
+                            android:textAlignment="center"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20dp" />
+
+                        <DatePicker
+                            android:id="@+id/timePicker1"
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:paddingTop="9.0dip"
+                            android:paddingBottom="9.0dip"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20.0dip"
+                            android:calendarViewShown="false"
+
+
+                            android:datePickerMode="spinner" />
+
+                        <EditText
+                            android:id="@+id/et_adresse"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100px"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:hint="Adresse"
+                            android:inputType="textMultiLine"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="9dp"
+                            android:textAlignment="center"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/et_mail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100px"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:hint="E-mail"
+                            android:inputType="textEmailAddress"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="9dp"
+                            android:textAlignment="center"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20dp" />
+
+                        <EditText
+                            android:id="@+id/et_password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100px"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/editbox_background"
+                            android:ems="10"
+                            android:hint="Mot de passe"
+                            android:inputType="textPassword"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="9dp"
+                            android:textAlignment="center"
+                            android:textColor="#ff1a102c"
+                            android:textSize="20dp" />
+
+                        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_pirates"
+                                android:layout_width="0dp"
+                                android:layout_weight="50"
+                                android:layout_height="100px"
+                                android:background="@android:drawable/editbox_background"
+                                android:ems="10"
+                                android:textSize="16dp"
+                                android:textColor="#ff1a102c"
+                                android:text="Transporteur"
+                                android:onClick="onRadioButtonClicked"
+                                tools:ignore="OnClick" />
+
+                            <RadioButton
+                                android:id="@+id/radio_ninjas"
+                                android:layout_width="0dp"
+                                android:layout_weight="50"
+                                android:layout_height="100px"
+                                android:textColor="#ff1a102c"
+                                android:background="@android:drawable/editbox_background"
+                                android:ems="10"
+                                android:textSize="16dp"
+                                android:text="Citoyen"
+                                android:onClick="onRadioButtonClicked"
+                                tools:ignore="OnClick" />
+                        </RadioGroup>
+
+                        <ImageView
+                            android:id="@+id/ivUserImage"
+                            android:layout_width="400px"
+                            android:layout_height="400px"
+                            android:layout_alignBottom="@+id/txtflollower"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/background"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/persoicon"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <Button
+                            android:id="@+id/BuSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="1pt"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/buttonblue"
+                            android:onClick="BuRegister"
+                            android:text="Sign Up"
+                            android:textColor="#ff06071c"
+                            tools:ignore="OnClick" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
