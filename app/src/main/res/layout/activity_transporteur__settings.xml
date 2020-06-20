@@ -8,61 +8,66 @@
     android:layout_height="match_parent"
     tools:context=".Transporteur_Settings">
 
-    <LinearLayout
-        android:padding="5pt"
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:touchscreenBlocksFocus="false"
-        android:layout_marginBottom="3dp">
-
-        <EditText
-            android:id="@+id/oldEmail"
-            android:layout_width="match_parent"
-            android:layout_height="125px"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@android:drawable/editbox_background"
-            android:ems="10"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress"
-            android:paddingTop="9dp"
-            android:paddingBottom="9dp"
-            android:textAlignment="center"
-            android:textColor="#ff1a102c"
-            android:textSize="20dp" />
-        <Button
-            android:id="@+id/Bureg"
-            android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="5pt"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10pt"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="0"
-            android:background="@drawable/buttonblue"
-            android:onClick="ResetPassword"
-            android:text="changer le mot de passe"
-            android:textColor="#ff06071c"
-            tools:ignore="OnClick" />
+            android:touchscreenBlocksFocus="false"
+            android:layout_marginBottom="3dp">
+
+            <EditText
+                android:id="@+id/oldEmail"
+                android:layout_width="match_parent"
+                android:layout_height="125px"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:textAlignment="center"
+                android:textColor="#ff1a102c"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/Bureg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/buttonblue"
+                android:onClick="ResetPassword"
+                android:text="changer le mot de passe"
+                android:textColor="#ff06071c"
+                tools:ignore="OnClick" />
 
 
-        <com.braintreepayments.cardform.view.CardForm
-            android:id="@+id/card_form2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <com.braintreepayments.cardform.view.CardForm
+                android:id="@+id/card_form2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btnAch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10pt"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="0"
-            android:background="@drawable/buttonblue"
-            android:text="Acheter maintenant"
-            android:textColor="#ff06071c" />
+            <Button
+                android:id="@+id/btnAch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/buttonblue"
+                android:text="Acheter maintenant"
+                android:textColor="#ff06071c" />
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

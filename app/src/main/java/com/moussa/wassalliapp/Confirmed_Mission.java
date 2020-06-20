@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.print.PrintDocumentAdapter;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -108,7 +109,7 @@ public class Confirmed_Mission extends AppCompatActivity {
 
         FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference =    mFirebaseDatabase.getReference("Orders");
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
@@ -146,6 +147,13 @@ public class Confirmed_Mission extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
     private class MyCustomAdapter extends BaseAdapter {
 
         public  ArrayList<Order>  listnewsDataAdpater ;

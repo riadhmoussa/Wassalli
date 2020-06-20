@@ -11,6 +11,7 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,7 +61,7 @@ public class Article_History extends AppCompatActivity {
         FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
         sharedRef=new SharedRef(getApplicationContext());
         DatabaseReference databaseReference =    mFirebaseDatabase.getReference("Orders");
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 listnewsData.removeAll(listnewsData);
@@ -99,7 +100,13 @@ public class Article_History extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     private class MyCustomAdapter extends BaseAdapter {
         public ArrayList<Order> listnewsDataAdpater ;

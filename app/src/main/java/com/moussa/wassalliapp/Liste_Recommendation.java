@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -47,7 +48,7 @@ public class Liste_Recommendation extends AppCompatActivity {
 
         FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference =    mFirebaseDatabase.getReference("Recommandation");
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 arrayList=new ArrayList<>();
@@ -189,7 +190,13 @@ public class Liste_Recommendation extends AppCompatActivity {
 
 
     }
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
     public  String Search(String str){
         for (int i=0;i<arrayList.size();i++){
             if(arrayList.get(i).Uid.equalsIgnoreCase(str)){

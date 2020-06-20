@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -88,7 +89,7 @@ public class Transporteur_Settings extends AppCompatActivity {
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference ref = database.getReference("Users").child(sharedRef.LoadDataUID()).child("Expired");
 
-                            ref.addValueEventListener(new ValueEventListener() {
+                            ref.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     // This method is called once with the initial value and again
@@ -130,6 +131,13 @@ public class Transporteur_Settings extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -68,6 +69,13 @@ public class Liste_Publication extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -99,7 +107,7 @@ public class Liste_Publication extends AppCompatActivity {
         if(adr==null&&date_pub==null){
             FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
             DatabaseReference databaseReference =    mFirebaseDatabase.getReference("Orders");
-            databaseReference.addValueEventListener(new ValueEventListener() {
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     listnewsData.removeAll(listnewsData);

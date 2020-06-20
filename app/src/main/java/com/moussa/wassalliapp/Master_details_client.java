@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,7 +71,7 @@ public class Master_details_client extends AppCompatActivity implements OnMapRea
             FirebaseDatabase mFirebaseDatabase = FirebaseDatabase.getInstance();
             sharedRef=new SharedRef(getApplicationContext());
             DatabaseReference databaseReference =    mFirebaseDatabase.getReference("Recommandation");
-            databaseReference.addValueEventListener(new ValueEventListener() {
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     listnewsData.removeAll(listnewsData);
@@ -110,7 +111,13 @@ public class Master_details_client extends AppCompatActivity implements OnMapRea
 
         //  Toast.makeText(getApplicationContext(),data,Toast.LENGTH_LONG).show();
     }
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
     private class MyCustomAdapter extends BaseAdapter {
         public  ArrayList<Recommandation>  listnewsDataAdpater ;
 
